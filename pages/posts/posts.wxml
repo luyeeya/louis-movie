@@ -3,7 +3,7 @@
   <swiper indicator-dots indicator-active-color="#eee" indicator-color="#444" circular autoplay>
     <block wx:for="{{posts}}" wx:key="id">
       <swiper-item>
-        <image bind:tap="goToDetail" data-id="{{item.id}}" src="{{item.image}}" />
+        <image bind:tap="goToDetail" data-id="{{item.id}}" src="{{item.image}}" mode="aspectFill" />
       </swiper-item>
     </block>
   </swiper>
