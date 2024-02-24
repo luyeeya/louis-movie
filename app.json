@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/posts/posts",
+    "pages/post-detail/post-detail",
+    "pages/movies/movies",
+    "pages/more-movies/more-movies",
+    "pages/movie-detail/movie-detail"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "",
+    "navigationBarBackgroundColor": "#C22A1E",
+    "backgroundColor": "#FFFFFF"
+  },
+  "tabBar": {
+    "color": "#CCCCCC",
+    "selectedColor": "#04BE02",
+    "borderStyle": "black",
+    "list": [
+      {
+        "text": "资讯",
+        "pagePath": "pages/posts/posts",
+        "iconPath": "/images/news.png",
+        "selectedIconPath": "/images/news_selected.png"
+      },
+      {
+        "text": "电影",
+        "pagePath": "pages/movies/movies",
+        "iconPath": "/images/movie.png",
+        "selectedIconPath": "/images/movie_selected.png"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "requiredBackgroundModes": [
+    "audio"
+  ]
+}

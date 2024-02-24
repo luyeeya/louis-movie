@@ -1,0 +1,50 @@
+{
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "projectname": "louis-movie",
+  "setting": {
+    "compileHotReLoad": true,
+    "bigPackageSizeSupport": false,
+    "urlCheck": false
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "movie-detail",
+          "pathName": "pages/movie-detail/movie-detail",
+          "query": "id=312",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "more-movies",
+          "pathName": "pages/more-movies/more-movies",
+          "query": "group=top250",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "movies",
+          "pathName": "pages/movies/movies",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "post-detail",
+          "pathName": "pages/post-detail/post-detail",
+          "query": "id=1",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "posts",
+          "pathName": "pages/posts/posts",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+<!--pages/welcome.wxml-->
+<view class="container">
+  <image class="avatar" src="/images/watching-movies.png" />
+  <text class="greeting">一起见证记录时空的力量 ~</text>
+  <button class="entrance" bind:tap="goToPosts">进入电影世界 →</button>
+</view>
