@@ -1,0 +1,14 @@
+<!--pages/movies.wxml-->
+<view class="container">
+  <l-search-bar bind:linconfirm="search" bind:lincancel="cancelSearch" l-class="ex-search-bar" placeholder="肖申克的救赎" />
+  <view wx:if="{{showSearchResult}}" class="search-container">
+    <block wx:for="{{searchResult}}" wx:key="id">
+      <movie class="movie" movie="{{item}}" />
+    </block>
+  </view>
+  <view wx:else>
+    <movie-list data-group="in_theaters" bind:tap="goToMoreMovies" ex-class="ex-movie-list" title="正在热映" movies="{{inTheaters}}" />
+    <movie-list data-group="coming_soon" bind:tap="goToMoreMovies" ex-class="ex-movie-list" title="即将上映" movies="{{comingSoon}}" />
+    <movie-list data-group="top250" bind:tap="goToMoreMovies" ex-class="ex-movie-list" title="TOP250" movies="{{top250}}" />
+  </view>
+</view>

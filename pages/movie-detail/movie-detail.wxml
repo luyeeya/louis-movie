@@ -1,0 +1,54 @@
+<!--pages/movie-detail/movie-detail.wxml-->
+<view class="container">
+  <image class="back-image" src="{{movie.image}}" mode="aspectFill" />
+  <view class="main-info">
+    <text class="main-title">{{movie.title}}</text>
+    <text class="sub-title">{{movie.subTitle}}</text>
+    <view class="popularity">
+      <text class="highlight-text">{{movie.likes}}</text>
+      <text class="const-text">人喜欢</text>
+      <text class="highlight-text">{{movie.comments}}</text>
+      <text class="const-text">条评论</text>
+    </view>
+    <image class="float-image" bind:tap="previewImage" src="{{movie.image}}" />
+  </view>
+  <view class="extra-info">
+    <view class="movie-title">
+      <text class="movie-title">{{movie.title}}</text>
+    </view>
+    <view class="flex-row">
+      <text class="label">评分</text>
+      <view class="rating-container">
+        <l-rating score="{{movie.stars}}" size="22" active-color="#F2AE44" inActive-color="#DADADA" disabled />
+        <text class="rating">{{movie.rating}}</text>
+      </view>
+    </view>
+    <view class="flex-row">
+      <text class="label">导演</text>
+      <text>{{movie.directors}}</text>
+    </view>
+    <view class="flex-row">
+      <text class="label">影人</text>
+      <text>{{movie.casts}}</text>
+    </view>
+    <view class="flex-row">
+      <text class="label">类型</text>
+      <text>{{movie.genres}}</text>
+    </view>
+  </view>
+  <view class="line"></view>
+  <view class="synopsis">
+    <text class="synopsis-title">剧情简介</text>
+    <text class="synopsis-content" user-select>{{movie.summary}}</text>
+  </view>
+  <view class="line"></view>
+  <view class="cast-container">
+    <text class="cast-title">影人</text>
+    <scroll-view class="casts" scroll-x enable-flex>
+      <view wx:for="{{movie.castsInfo}}" wx:key="name" wx:for-item="cast" class="cast">
+        <image class="cast-avatar" src="{{cast.avatar}}" />
+        <text class="cast-name">{{cast.name}}</text>
+      </view>
+    </scroll-view>
+  </view>
+</view>

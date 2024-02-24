@@ -1,0 +1,13 @@
+<!--components/movie-list/index.wxml-->
+<view class="container ex-class">
+  <view class="title-container">
+    <text class="group-title">{{title}}</text>
+    <text class="more">更多 ></text>
+  </view>
+
+  <view class="movie-container">
+    <block wx:for="{{movies}}" wx:key="id">
+      <movie movie="{{item}}" />
+    </block>
+  </view>
+</view>

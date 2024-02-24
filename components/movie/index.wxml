@@ -1,0 +1,9 @@
+<!--components/movie/index.wxml-->
+<view class="container" bind:tap="goToDetail">
+  <image class="movie-image" src="{{movie.images.large}}" />
+  <text class="movie-title">{{movie.title}}</text>
+  <view class="rate-container">
+    <l-rating score="{{movie.rating.average / 2}}" size="22" active-color="#F2AE44" inActive-color="#DADADA" disabled />
+    <text class="score">{{movie.rating.average === 0 ? "" : movie.rating.average}}</text>
+  </view>
+</view>

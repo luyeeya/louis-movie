@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "l-rating": "/miniprogram_npm/lin-ui/rate/index"
+  }
+}

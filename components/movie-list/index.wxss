@@ -1,0 +1,25 @@
+/* components/movie-list/index.wxss */
+.container {
+  padding: 30rpx 20rpx;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+
+.movie-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.group-title {
+  font-weight: 600;
+}
+
+.more{
+  color: #1f4ba5;
+}

@@ -1,0 +1,32 @@
+/* pages/movies.wxss */
+page {
+  background-color: #f2f2f2;
+}
+
+/* 使用外部样式类控制组件样式 */
+.ex-movie-list {
+  background-color: #fff;
+  margin-bottom: 30rpx;
+}
+
+.ex-search-bar {
+  /* 使用 !important 提高优先级 */
+  height: 80rpx !important; 
+}
+
+.search-container {
+  padding: 30rpx 20rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.search-container::after {
+  content: '';
+  width: 200rpx;
+}
+
+.movie {
+  margin-bottom: 30rpx;
+}
