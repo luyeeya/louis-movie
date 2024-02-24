@@ -1,0 +1,20 @@
+<!--components/post/index.wxml-->
+<view bind:tap="onTap" class="post">
+  <view class="avatar-and-date">
+    <image class="post-avatar" src="{{post.avatar}}" />
+    <text class="post-date">{{post.date}}</text>
+  </view>
+
+  <text class="post-title">{{post.title}}</text>
+
+  <image class="post-image" src="{{post.image}}" />
+
+  <text class="post-summary" user-select>{{post.summary}}</text>
+
+  <view class="post-info">
+    <l-icon size="32" class="post-info-icon" name="favor" />
+    <text class="post-info-content">{{post.favourites}}</text>
+    <l-icon size="32" class="post-info-icon" name="eye" />
+    <text class="post-info-content">{{post.views}}</text>
+  </view>
+</view>

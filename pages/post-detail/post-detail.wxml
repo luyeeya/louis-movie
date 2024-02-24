@@ -1,0 +1,22 @@
+<!--pages/post-detail/post-detail.wxml-->
+<view class="container">
+  <image class="head-image" src="{{postContent.image}}" />
+  <image wx:if="{{isPlayingMusic}}" class="music" bind:tap="pauseMusic" src="/images/play.png" />
+  <image wx:else class="music" bind:tap="playMusic" src="/images/pause.png" />
+  <view class="author-date">
+    <image class="avatar" src="{{postContent.avatar}}"></image>
+    <text class="author">{{postContent.author}}</text>
+    <text class="const-text">发表于</text>
+    <text class="date">{{postContent.date}}</text>
+  </view>
+  <text class="title">{{postContent.title}}</text>
+  <view class="tool">
+    <view class="operations">
+      <image wx:if="{{bookmarked}}" class="bookmark" bind:tap="switchBookmarkStatus" src="/images/bookmarked.png" />
+      <image wx:else class="bookmark" bind:tap="switchBookmarkStatus" src="/images/bookmark.png" />
+      <image class="share" src="/images/share.png" />
+    </view>
+    <view class="horizon"></view>
+  </view>
+  <text class="content" user-select>{{postContent.detail}}</text>
+</view>

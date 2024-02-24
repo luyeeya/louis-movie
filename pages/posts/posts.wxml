@@ -1,0 +1,16 @@
+<!--pages/posts.wxml-->
+<view class="container">
+  <swiper indicator-dots indicator-active-color="#eee" indicator-color="#444" circular autoplay>
+    <block wx:for="{{posts}}" wx:key="id">
+      <swiper-item>
+        <image bind:tap="goToDetail" data-id="{{item.id}}" src="{{item.image}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="posts">
+    <block wx:for="{{posts}}" wx:key="id">
+      <post bind:tappost="goToDetail" post="{{item}}" />
+    </block>
+  </view>
+</view>
